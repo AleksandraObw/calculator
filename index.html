@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icon.png">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="body__container container"> 
+        <div class="container__display display">
+            <div class="display__upper upper"><span class="hidden" id="upper-display">0</span><span class="hidden" id="current-operator">0</span></div>
+            <div class="display_lower lower" id="lower-display">0</div>
+        </div>
+        <div class="container__keys keys">
+            <button class="keys__button button highlight clear">C</button>
+            <button class="keys__button button additional delete"><i class="fas fa-backspace"></i></button>
+            <button class="keys__button button additional positive-negative" value="">±</button>
+            <button class="keys__button button operator" value="+">+</button>
+            <button class="keys__button button number" value="7">7</button>
+            <button class="keys__button button number" value="8">8</button>
+            <button class="keys__button button number" value="9">9</button>
+            <button class="keys__button button operator" value="-">-</button>
+            <button class="keys__button button number" value="4">4</button>
+            <button class="keys__button button number" value="5">5</button>
+            <button class="keys__button button number" value="6">6</button>
+            <button class="keys__button button operator" value="*">*</button>
+            <button class="keys__button button number" value="1">1</button>
+            <button class="keys__button button number" value="2">2</button>
+            <button class="keys__button button number" value="3">3</button>
+            <button class="keys__button button operator" value="/">/</button>
+            <button class="keys__button button number" value="0">0</button>
+            <button class="keys__button button decimal" value=".">.</button>
+            <button class="keys__button button number" value="00">00</button>
+            <button class="keys__button button highlight result" value="">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
