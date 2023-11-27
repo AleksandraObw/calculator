@@ -8,6 +8,7 @@ const buttonClear = document.querySelector('.clear')
 const buttonDelete = document.querySelector('.delete')
 const buttonPosNeg = document.querySelector('.positive-negative')
 const buttonResult = document.querySelector('.result')
+const buttonZeroes = document.querySelector('.zeroes')
 
 let decimalAdded = false
 let firstOperandAdded = false
@@ -35,6 +36,12 @@ numbers.forEach(event =>
             }
         } 
     }))
+
+buttonZeroes.addEventListener('click', (event) => {
+    if (lowerDisplay.textContent !== '0' && lowerDisplay.textContent.length < 11) {
+        addSign(event.target)
+    }
+})
 
 operators.forEach(event => 
      event.addEventListener('click', (event) => {
@@ -104,7 +111,6 @@ buttonDelete.addEventListener('click', event => {
     }
 })
 
-
 function addSign (sign) {
     lowerDisplay.textContent += sign.value
 }
@@ -144,6 +150,12 @@ function showResult() {
         }
     lowerDisplay.textContent = result    
     resultShown = true
+    operatorAdded = false
+    firstOperandAdded = false
+    secondOperandAdded = false
+    firstOperand = 0
+    secondOperand = 0
+    operator = ''
 }
 
 function changeClearBtn() {
